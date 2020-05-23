@@ -1,4 +1,26 @@
 def join_nested_strings(src)
-  # src will be an Array of Arrays of Strings and Integers
-  # Combine all Strings present in the AoA into a single value and return it
+   
+  src.to_s 
+   array = []
+   array2 = []
+ count = 0
+ 
+ 
+   while src.length > count do
+     inner = 0 
+             while src[count].length > inner 
+     
+                 if src[count][inner].is_a?(Numeric)
+                    inner+=1
+                else  
+                   array << src[count][inner]
+                    inner += 1
+       
+                 end
+    
+  end
+    count += 1
+ end
+  
+array.join(" ")
 end
